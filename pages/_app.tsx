@@ -1,7 +1,5 @@
 import * as React from "react";
 import Head from "next/head";
-import { AnimatePresence, AnimateSharedLayout} from "framer-motion";
-
 import {
   ChakraProvider,
   Heading,
@@ -22,8 +20,6 @@ import {INFORMATION} from "../app/constants";
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
   return (
     <>
-     <AnimateSharedLayout type="crossfade">
-       <AnimatePresence key="ki">
       <Head>
         <title>MofletesMdp </title>
         <meta content="initial-scale=1.0, width=device-width" name="viewport" />
@@ -109,10 +105,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
           {/* Fin de copyright */}
         </Container>
       </ChakraProvider>
-      </AnimatePresence>
-      </AnimateSharedLayout>
     </>
-    
   );
 };
 
