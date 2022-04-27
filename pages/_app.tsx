@@ -24,8 +24,8 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
         <title>MofletesMdp </title>
         <meta content="initial-scale=1.0, width=device-width" name="viewport" />
         {/* Inicio de meta tags de licencia - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
-        <meta content="LAMDEV" name="author" />
-        <meta content="EasyEcommerce" name="copyright" />
+        <meta content="goncy" name="author" />
+        <meta content="Gonzalo Pozzo" name="copyright" />
         {/* Fin de meta tags de licencia */}
       </Head>
       <ChakraProvider theme={theme}>
@@ -96,9 +96,9 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
           <Divider marginY={4} />
           {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
           <Text textAlign="center">
-            © Copyright {new Date().getFullYear()} Creador por {" "}
+            © Copyright {new Date().getFullYear()}. Creador por @EasyTurno 2022{" "}
             <Link isExternal href="https://www.easyturno.net">
-              Easyturno@2022
+              easyturno@2022
             </Link>
             .
           </Text>
