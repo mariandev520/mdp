@@ -4,13 +4,13 @@ export const INFORMATION = {
   title: "Mofletesmdp",
   description:
     "Ropita para bebés y niños de la mejor calidad! Entregas a domicilio en Mar del Plata",
-  phone: `5491141414141`,
+  phone: `5491160325056`,
   sheet: `https://docs.google.com/spreadsheets/d/e/2PACX-1vR6XdrpjQ-zuLmnwNHBQ8NOWoeWBSA-Or77wXix4dmp38pBE5fvVgFhdTxxlAlSM9YezHecRTu3Cd43/pub?output=csv`,
   color: `purple`,
   social: [
     {
       name: "instagram",
-      url: ``,
+      url: `https://www.instagram.com/mofletesmdp/?igshid=YmMyMTA2M2Y=`,
     },
     {
       name: "whatsapp",
