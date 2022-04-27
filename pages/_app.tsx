@@ -100,7 +100,6 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
             <Link isExternal href="https://www.easyturno.net">
               easyturno@2022
             </Link>
-            .
           </Text>
           {/* Fin de copyright */}
         </Container>
