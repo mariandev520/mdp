@@ -3,7 +3,7 @@ export const INFORMATION = {
   banner: "/assets/banner.jpg",
   title: "Mofletesmdp",
   description:
-    "Ropita para bebés y niños de la mejor calidad! Entregas a domicilio en Mar del Plata",
+    "Ropita para bebés y niños de la mejor calidad! Entregas a domicilio a todo el Pais",
   phone: `5492236356400`,
   sheet: `https://docs.google.com/spreadsheets/d/e/2PACX-1vR6XdrpjQ-zuLmnwNHBQ8NOWoeWBSA-Or77wXix4dmp38pBE5fvVgFhdTxxlAlSM9YezHecRTu3Cd43/pub?output=csv`,
   color: `purple`,
