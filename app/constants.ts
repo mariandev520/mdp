@@ -1,7 +1,7 @@
 export const INFORMATION = {
   avatar: "/assets/avatar.jpg",
   banner: "/assets/banner.jpg",
-  title: "Mofletes",
+  
   description:
     "Ropita para bebés y niños de la mejor calidad! Entregas a domicilio a todo el Pais",
   phone: `5492236356400`,
