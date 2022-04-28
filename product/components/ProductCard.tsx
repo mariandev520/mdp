@@ -1,5 +1,5 @@
 import React from "react";
-import {Stack, Button, Text, Image, Flex} from "@chakra-ui/react";
+import {Stack, Button, Text, Image, Flex,Badge} from "@chakra-ui/react";
 import {motion, AnimatePresence, AnimateSharedLayout} from "framer-motion";
 
 
@@ -79,7 +79,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
       </AnimatePresence>
           <Stack justifyContent="space-between" spacing={1} width="100%">
             <Stack spacing={1}>
-              <Text fontWeight="500">{product.title}</Text>
+            <Badge colorScheme='purple'>{product.title}</Badge>
               <Text color="gray.500" fontSize="sm">
                 {product.description}
               </Text>
