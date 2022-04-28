@@ -50,7 +50,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
 
 
             <ModalFooter>
-              <Button colorScheme='blue' mr={3} onClick={onClose}>
+              <Button colorScheme='purple' mr={3} onClick={onClose}>
                 Cerrar
               </Button>
              
