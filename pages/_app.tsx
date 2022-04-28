@@ -64,7 +64,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                   textAlign={{base: "center", sm: "left"}}
                 >
                   <Stack spacing={0}>
-                    <Heading>{INFORMATION.title}</Heading>
+                    <Heading></Heading>
                     <Text color="gray.500" fontWeight="500">
                       {INFORMATION.description}
                     </Text>
