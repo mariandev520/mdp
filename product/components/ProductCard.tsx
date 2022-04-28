@@ -29,7 +29,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>{product.title}</ModalHeader>
+            <ModalHeader color="purple">{product.title}</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
             <Image
@@ -50,9 +50,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
 
 
             <ModalFooter>
-              <Button colorScheme='purple' mr={3} onClick={onClose}>
-                Cerrar
-              </Button>
+            <Text color="purple">{product.description}</Text>
              
             </ModalFooter>
           </ModalContent>
