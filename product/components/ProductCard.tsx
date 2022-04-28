@@ -1,7 +1,7 @@
 import React from "react";
 import {Stack,Button, Text, Image, Flex,Badge,Modal,useDisclosure,ModalBody,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalFooter} from "@chakra-ui/react";
 import {motion, AnimatePresence, AnimateSharedLayout} from "framer-motion";
-
+import { ViewIcon} from '@chakra-ui/icons'
 
 import {parseCurrency} from "../../utils/currency";
 import {CartItem} from "../../cart/types";
@@ -25,7 +25,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
     return (
       <>
       
-      <Button color="purple"  onClick={onOpen}>Ver</Button>
+      <Button color="purple"  onClick={onOpen}><ViewIcon color="cyan.500" ></ViewIcon></Button>
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
