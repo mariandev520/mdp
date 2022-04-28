@@ -1,5 +1,5 @@
 import React from "react";
-import {Stack, Button, Text, Image, Flex,Badge} from "@chakra-ui/react";
+import {Stack,Button, Text, Image, Flex,Badge,Modal,useDisclosure,ModalBody,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalFooter} from "@chakra-ui/react";
 import {motion, AnimatePresence, AnimateSharedLayout} from "framer-motion";
 
 
@@ -14,19 +14,58 @@ interface Props {
   onAdd: (product: Product) => void;
 }
 
+
 const ProductCard: React.FC<Props> = ({product, onAdd}) => {
   const [selectedImage ,setSelectedImage] = React.useState<string>(null);
   const [isModalOpen, toggleModal ] = React.useState(false);
   const cartItem = React.useMemo<CartItem>(() => ({...product, quantity: 1}), [product]);
 
+  function BasicUsage() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    return (
+      <>
+      
+      <Button color="purple"  onClick={onOpen}>Ver</Button>
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>{product.title}</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+            <Image
+          as={motion.img}
+            backgroundColor="white"
+            borderRadius="md"
+            cursor="pointer"
+            layoutId={product.image}
+           
+            src={product.image}
+            width="100"
+            
+          
+          />
+        
+            </ModalBody>
 
 
+
+            <ModalFooter>
+              <Button colorScheme='blue' mr={3} onClick={onClose}>
+                Cerrar
+              </Button>
+             
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </>
+    )
+  }
 
   return (
     <>
- 
+
     <AnimateSharedLayout type="crossfade">
-  
+ 
       <Stack
         key={product.id}
         alignItems="center"
@@ -39,6 +78,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
         spacing={3}
       >
         <Stack direction="row" padding={2} spacing={4} width="100%">
+        
           <Image
           as={motion.img}
             backgroundColor="white"
@@ -51,9 +91,9 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
             objectFit="contain"
             src={product.image}
             width={{base: 24, sm: 36}}
-            
-            onClick={() =>  setSelectedImage(product.image) }
+          
           />
+          {BasicUsage()}
             <AnimatePresence >
           {selectedImage && <Flex  
           key="backdrop" alignItems="left" 
@@ -66,13 +106,8 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
           left={0}
           height="85%"
           width="80%"
-         
           objectFit='cover'
-       
-          
-          onClick={()=> setSelectedImage(null) }
-          >
-
+                          >
               <Image   key="image" src={selectedImage} />
           </Flex> }
 
@@ -93,12 +128,12 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
             { selectedImage==(null)  && 
             
               <Button
-              
-                size="xs"
+              color="purple" 
+                size="sm"
          
                  onClick={() => (product.options ? toggleModal(true) : onAdd(cartItem))}
               >
-                Agregar
+                Comprar
               </Button> 
  }
 
