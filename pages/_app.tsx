@@ -95,7 +95,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
           </Stack>
           <Divider marginY={4} />
           {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
-          <Text fontSize='sm' color="blue.500"   textAlign="center">
+          <Text color="blue.500" textAlign="center">
             © Copyright {new Date().getFullYear()}. Creador por{" "}
             <Link isExternal href="https://www.easyturno.net">
               easyturno@2022
