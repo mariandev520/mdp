@@ -1,5 +1,5 @@
 import React from "react";
-import {Stack,Button, Text, Image, Flex,Badge,Modal,useDisclosure,ModalBody,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalFooter} from "@chakra-ui/react";
+import {Stack,Button, Text, Image, Flex,Badge,Modal,useDisclosure,ModalBody,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalFooter, Divider} from "@chakra-ui/react";
 import {motion, AnimatePresence, AnimateSharedLayout} from "framer-motion";
 import { ViewIcon} from '@chakra-ui/icons'
 
@@ -58,6 +58,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
       </>
     )
   }
+  
 
   return (
     <>
@@ -133,7 +134,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
               >
                 Comprar
               </Button> 
- }
+ }            
 
             </Stack>
           </Stack>
@@ -152,6 +153,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
       )}
   
   </AnimateSharedLayout>
+  
 
     </>
       

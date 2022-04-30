@@ -11,12 +11,36 @@ import {
   Link,
   Box,
   Flex,
+ Center,
 } from "@chakra-ui/react";
 import {AppProps} from "next/app";
 
 import theme from "../theme";
 import {INFORMATION} from "../app/constants";
 
+/*
+function CollapseEx() {
+  const { isOpen, onToggle } = useDisclosure()
+
+  return (
+    <>
+      <Button size="md" position="relative" onClick={onToggle}>Ayuda</Button>
+      <Collapse in={isOpen} animateOpacity>
+        <Box
+          p='40px'
+          color='blue.800'
+          mt='4'
+          bg='purple.100'
+          rounded='md'
+          shadow='md'
+        >
+          <Text>!Una vez echa tu seleccion llegaras al Whatsaap para continuar directamente y finalizar con nosotros pago y envios!</Text> 
+        </Box>
+      </Collapse>
+    </>
+  )
+}
+*/
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
   return (
     <>
@@ -93,12 +117,15 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
             </Stack>
             <Component {...pageProps} />
           </Stack>
+          <Center height='50px'>
+  <Divider orientation='vertical' />
+</Center>
           <Divider marginY={4} />
           {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
           <Text color="blue.500" textAlign="center">
-            © Copyright {new Date().getFullYear()}. Creador por{" "}
+            © Copyright {new Date().getFullYear()}. Desarrollado por{" "}
             <Link isExternal href="https://www.easyturno.net">
-              easyturno@2022
+              easyturno@2022 
             </Link>
           </Text>
           {/* Fin de copyright */}
