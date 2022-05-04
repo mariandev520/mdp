@@ -1,5 +1,5 @@
 import React from "react";
-import {Stack,Button, Text, Image, Flex,Badge,Modal,useDisclosure,ModalBody,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalFooter, Divider} from "@chakra-ui/react";
+import {Stack,Button, Text, Image, Flex,Badge,Modal,useDisclosure,ModalBody,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalFooter, Divider, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup} from "@chakra-ui/react";
 import {motion, AnimatePresence, AnimateSharedLayout} from "framer-motion";
 import { ViewIcon} from '@chakra-ui/icons'
 
@@ -65,6 +65,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
 
     <AnimateSharedLayout type="crossfade">
  
+ 
       <Stack
         key={product.id}
         alignItems="center"
@@ -77,7 +78,6 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
         spacing={3}
       >
         <Stack direction="row" padding={2} spacing={4} width="100%">
-        
           <Image
           as={motion.img}
             backgroundColor="white"
@@ -94,7 +94,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
           />
           {BasicUsage()}
             <AnimatePresence >
-          {selectedImage && <Flex  
+          {selectedImage && <Flex   
           key="backdrop" alignItems="left" 
           as={motion.div} 
           backgroundColor="rgba(0,0,0,0.5)"
@@ -120,7 +120,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
             </Stack>
             <Stack alignItems="flex-end" direction="row" justifyContent="space-between">
               <Text color="brand" fontSize="sm" fontWeight="500">
-                {parseCurrency(product.price)}
+              {parseCurrency(product.price)}
               </Text>
       
   )         

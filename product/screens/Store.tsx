@@ -9,10 +9,15 @@ import CartDrawer from "../../cart/components/CartDrawer";
 import {parseCurrency} from "../../utils/currency";
 import {getCartTotal} from "../../cart/utils";
 
+
+
+
+
 interface Props {
   products: Product[];
 }
 
+  
 const StoreScreen: React.FC<Props> = ({products}) => {
   const [cart, setCart] = React.useState<CartItem[]>([]);
   const [isCartOpen, toggleCart] = React.useState<boolean>(false);

@@ -11,8 +11,8 @@ import {
   Link,
   Box,
   Flex,
- Center,
-} from "@chakra-ui/react";
+  Center,
+  Skeleton,} from "@chakra-ui/react";
 import {AppProps} from "next/app";
 
 import theme from "../theme";
@@ -41,6 +41,7 @@ function CollapseEx() {
   )
 }
 */
+
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
   return (
     <>
@@ -71,8 +72,8 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 <Box
                   backgroundColor="white"
                   borderRadius={9999}
-                  marginTop={{base: -12, sm: -16}}
-                  minWidth={{base: 24, sm: 32}}
+                  marginTop={{ base: -12, sm: -16 }}
+                  minWidth={{ base: 24, sm: 32 }}
                   padding={1}
                 >
                   <Image
@@ -115,17 +116,24 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 </Stack>
               </Stack>
             </Stack>
+            <Skeleton startColor="violet" endColor="blue.300" height="40px">
+              <Text>PEPE</Text>
+            </Skeleton>
+
             <Component {...pageProps} />
           </Stack>
           <Center height='50px'>
   <Divider orientation='vertical' />
-</Center>
+          </Center>
           <Divider marginY={4} />
           {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
+          <Skeleton startColor="violet" endColor="purple" height="40px">
+            <Text>PEPE</Text>
+          </Skeleton>
           <Text color="blue.500" textAlign="center">
             © Copyright {new Date().getFullYear()}. Desarrollado por{" "}
             <Link isExternal href="https://www.easyturno.net">
-              easyturno@2022 
+              easyturno@2022
             </Link>
           </Text>
           {/* Fin de copyright */}
