@@ -11,36 +11,12 @@ import {
   Link,
   Box,
   Flex,
-  Center,
-  Skeleton,} from "@chakra-ui/react";
+  Skeleton,
+} from "@chakra-ui/react";
 import {AppProps} from "next/app";
 
 import theme from "../theme";
 import {INFORMATION} from "../app/constants";
-
-/*
-function CollapseEx() {
-  const { isOpen, onToggle } = useDisclosure()
-
-  return (
-    <>
-      <Button size="md" position="relative" onClick={onToggle}>Ayuda</Button>
-      <Collapse in={isOpen} animateOpacity>
-        <Box
-          p='40px'
-          color='blue.800'
-          mt='4'
-          bg='purple.100'
-          rounded='md'
-          shadow='md'
-        >
-          <Text>!Una vez echa tu seleccion llegaras al Whatsaap para continuar directamente y finalizar con nosotros pago y envios!</Text> 
-        </Box>
-      </Collapse>
-    </>
-  )
-}
-*/
 
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
   return (
@@ -72,8 +48,8 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 <Box
                   backgroundColor="white"
                   borderRadius={9999}
-                  marginTop={{ base: -12, sm: -16 }}
-                  minWidth={{ base: 24, sm: 32 }}
+                  marginTop={{base: -12, sm: -16}}
+                  minWidth={{base: 24, sm: 32}}
                   padding={1}
                 >
                   <Image
@@ -89,7 +65,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                   textAlign={{base: "center", sm: "left"}}
                 >
                   <Stack spacing={0}>
-                    <Heading></Heading>
+                    <Heading />
                     <Text color="gray.500" fontWeight="500">
                       {INFORMATION.description}
                     </Text>
@@ -116,22 +92,15 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 </Stack>
               </Stack>
             </Stack>
-            <Skeleton startColor="violet" endColor="blue.300" height="40px">
-              <Text>PEPE</Text>
-            </Skeleton>
-
             <Component {...pageProps} />
           </Stack>
-          <Center height='50px'>
-  <Divider orientation='vertical' />
-          </Center>
-          <Divider marginY={4} />
-          {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
-          <Skeleton startColor="violet" endColor="purple" height="40px">
+          <Skeleton startColor="violet" endColor="blue.300" height="40px">
             <Text>PEPE</Text>
           </Skeleton>
+          <Divider marginY={4} />
+          {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
           <Text color="blue.500" textAlign="center">
-            © Copyright {new Date().getFullYear()}. Desarrollado por{" "}
+            © Copyright {new Date().getFullYear()} Creador por{" "}
             <Link isExternal href="https://www.easyturno.net">
               easyturno@2022
             </Link>
