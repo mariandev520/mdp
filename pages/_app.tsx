@@ -68,7 +68,11 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 >
                   <Stack spacing={0}>
                     <Heading />
-                    <Text color="gray.500" fontWeight="500">
+                    <Text
+                      className="animate__animated animate__lightSpeedInRight animate__slow	3s "
+                      color="gray.500"
+                      fontWeight="500"
+                    >
                       <h2>{INFORMATION.description} </h2>
                     </Text>
                   </Stack>
@@ -102,7 +106,11 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
           </Skeleton>
           <Divider marginY={4} />
           {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
-          <Text color="blue.500" textAlign="center">
+          <Text
+            className="animate__animated animate__flipInY animate__slow	2s animate__repeat-3	3"
+            color="blue.500"
+            textAlign="center"
+          >
             © Copyright {new Date().getFullYear()} Creador por{" "}
             <Link isExternal href="https://www.easyturno.net">
               easyturno@2022
