@@ -9,7 +9,7 @@ import CartDrawer from "../../cart/components/CartDrawer";
 import {parseCurrency} from "../../utils/currency";
 import {getCartTotal} from "../../cart/utils";
 
-
+import "animate.css";
 
 
 
@@ -82,7 +82,7 @@ const StoreScreen: React.FC<Props> = ({products}) => {
         )}
         {Boolean(cart.length) && (
           <Flex alignItems="center" bottom={4} justifyContent="center" position="sticky">
-            <Button
+            <Button className="animate__animated animate__bounceInDown animate__slow	3s "
               boxShadow="xl"
               colorScheme="primary"
               data-testid="show-cart"
