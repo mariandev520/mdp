@@ -1,12 +1,16 @@
-import React from "react";
+
+import * as React from 'react';
 import {Stack,Button, Text, Image, Flex,Badge,Modal,useDisclosure,ModalBody,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalFooter, Divider, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup} from "@chakra-ui/react";
 import {motion, AnimatePresence, AnimateSharedLayout} from "framer-motion";
-import { ViewIcon} from '@chakra-ui/icons'
-
+import { AddIcon, PlusSquareIcon, ViewIcon} from '@chakra-ui/icons'
 import {parseCurrency} from "../../utils/currency";
 import {CartItem} from "../../cart/types";
 import {Product} from "../types";
-import CartItemDrawer from "../../cart/components/CartItemDrawer";
+import CartItemDrawer from '../../cart/components/CartItemDrawer';
+
+import "animate.css";
+
+
 
 
 interface Props {
@@ -109,7 +113,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
                           >
               <Image   key="image" src={selectedImage} />
           </Flex> }
-
+              
       </AnimatePresence>
           <Stack justifyContent="space-between" spacing={1} width="100%">
             <Stack spacing={1}>
@@ -122,20 +126,23 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
               <Text color="brand" fontSize="sm" fontWeight="500">
               {parseCurrency(product.price)}
               </Text>
-      
   )         
             { selectedImage==(null)  && 
             
-              <Button
+              <Button className="animate__animated animate__flash animate__slow	2s animate__infinite	infinite"
               color="purple" 
                 size="sm"
-         
+                bgColor="yellow.100"
+               
+              
                  onClick={() => (product.options ? toggleModal(true) : onAdd(cartItem))}
               >
-                Comprar
+                comprar
               </Button> 
+             
  }            
 
+              
             </Stack>
           </Stack>
         </Stack>
@@ -153,7 +160,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
       )}
   
   </AnimateSharedLayout>
-  
+
 
     </>
       

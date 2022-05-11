@@ -1,5 +1,6 @@
 import * as React from "react";
 import Head from "next/head";
+import "animate.css";
 import {
   ChakraProvider,
   Heading,
@@ -48,6 +49,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 <Box
                   backgroundColor="white"
                   borderRadius={9999}
+                  className="animate__animated animate__lightSpeedInRight animate__slow	2s "
                   marginTop={{base: -12, sm: -16}}
                   minWidth={{base: 24, sm: 32}}
                   padding={1}
@@ -67,7 +69,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                   <Stack spacing={0}>
                     <Heading />
                     <Text color="gray.500" fontWeight="500">
-                      {INFORMATION.description}
+                      <h2>{INFORMATION.description} </h2>
                     </Text>
                   </Stack>
                   <Stack direction="row">
@@ -83,6 +85,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                           width={10}
                         >
                           <Image
+                            className="animate__animated animate__rotateIn animate__slow	3s animate__infinite	infinite"
                             src={`https://icongr.am/fontawesome/${social.name}.svg?size=24&color=ffffff`}
                           />
                         </Flex>
@@ -94,7 +97,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
             </Stack>
             <Component {...pageProps} />
           </Stack>
-          <Skeleton startColor="violet" endColor="blue.300" height="40px">
+          <Skeleton endColor="blue.300" height="40px" startColor="violet">
             <Text>PEPE</Text>
           </Skeleton>
           <Divider marginY={4} />
