@@ -69,7 +69,7 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
 
     <AnimateSharedLayout type="crossfade">
  
- 
+        {product.category=="BB"?
       <Stack
         key={product.id}
         alignItems="center"
@@ -147,6 +147,9 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
           </Stack>
         </Stack>
       </Stack>
+
+    :console.log("fun")}
+
       {isModalOpen && (
         <CartItemDrawer
           isOpen
