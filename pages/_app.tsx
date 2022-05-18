@@ -111,7 +111,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
             </Badge>
             <HStack padding={3}>
               <Circle color="white" size="60px">
-                <Link isExternal href="https://mofletes.vercel.app/">
+                <Link isExternal href="https://wwww.mofletes.com.ar/">
                   <Button colorScheme="purple" size="md">
                     Niñ@s
                   </Button>
