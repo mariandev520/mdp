@@ -84,7 +84,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                   <Stack direction="row">
                     {INFORMATION.social.map((social) => (
                       <Link key={social.name} isExternal href={social.url}>
-                        500{" "}
+                        {" "}
                         <Flex
                           alignItems="center"
                           backgroundColor="brand"
