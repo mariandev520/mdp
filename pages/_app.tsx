@@ -105,7 +105,11 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 Niñ@s
               </Button>
             </Link>
-            <Link href="#">BABYS</Link>
+            <Link href="#">
+              <Button colorScheme="purple" size="xs">
+                Bebes
+              </Button>
+            </Link>
             <Component {...pageProps} />
           </Stack>
           <Skeleton endColor="blue.300" height="40px" startColor="violet">
