@@ -99,12 +99,10 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 </Stack>
               </Stack>
             </Stack>
-            <Link href='https://mofletes.vercel.app/' isExternal>
-            KIDS 
-</Link>
-      <Link href='#' >
-         BABYS 
-</Link>
+            <Link isExternal href="https://mofletes.vercel.app/">
+              KIDS
+            </Link>
+            <Link href="#">BABYS</Link>
             <Component {...pageProps} />
           </Stack>
           <Skeleton endColor="blue.300" height="40px" startColor="violet">
