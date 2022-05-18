@@ -101,17 +101,17 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
               </Stack>
             </Stack>
             <Link isExternal href="https://mofletes.vercel.app/">
-            <Button colorScheme="purple" size="xs">
-                 Niñ@s
+              <Button colorScheme="purple" size="xs">
+                Niñ@s
               </Button>
             </Link>
             <Link href="#">BABYS</Link>
             <Component {...pageProps} />
           </Stack>
           <Skeleton endColor="blue.300" height="40px" startColor="violet">
-          <Button colorScheme="purple" size="xs">
-                 Bebes
-              </Button>
+            <Button colorScheme="purple" size="xs">
+              Bebes
+            </Button>
           </Skeleton>
           <Divider marginY={4} />
           {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
