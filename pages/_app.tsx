@@ -14,6 +14,10 @@ import {
   Flex,
   Skeleton,
   Button,
+  HStack,
+  Circle,
+  Square,
+  Badge,
 } from "@chakra-ui/react";
 import {AppProps} from "next/app";
 
@@ -80,7 +84,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                   <Stack direction="row">
                     {INFORMATION.social.map((social) => (
                       <Link key={social.name} isExternal href={social.url}>
-                        <Flex
+                500       <Flex
                           alignItems="center"
                           backgroundColor="brand"
                           borderRadius={9999}
@@ -100,22 +104,27 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                 </Stack>
               </Stack>
             </Stack>
-            <Link isExternal href="https://mofletes.vercel.app/">
-              <Button colorScheme="purple" size="xs">
+            <Badge paddingLeft={3}  colorScheme='purple'> Categorias  </Badge>
+            <HStack   padding={3}>
+  <Circle size='60px'  color='white'>
+  <Link isExternal href="https://mofletes.vercel.app/">
+              <Button colorScheme="purple" size="md">
                 Niñ@s
               </Button>
             </Link>
-            <Link href="#">
-              <Button colorScheme="purple" size="xs">
+  </Circle>
+  <Square paddingLeft={8}  size='60px' color='white'>
+  <Link  href="#">
+              <Button colorScheme="purple" size="md">
                 Bebes
               </Button>
             </Link>
+  </Square>
+</HStack>
+            
             <Component {...pageProps} />
           </Stack>
           <Skeleton endColor="blue.300" height="40px" startColor="violet">
-            <Button colorScheme="purple" size="xs">
-              Bebes
-            </Button>
           </Skeleton>
           <Divider marginY={4} />
           {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
