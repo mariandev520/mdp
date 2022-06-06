@@ -20,6 +20,7 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import {AppProps} from "next/app";
+import "transition-style";
 
 import theme from "../theme";
 import {INFORMATION} from "../app/constants";
@@ -27,19 +28,19 @@ import {INFORMATION} from "../app/constants";
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
   return (
     <>
-      <Head>
-        <title>MofletesMdp </title>
+<Head>
+        <title>Mofletes </title>
         <meta content="initial-scale=1.0, width=device-width" name="viewport" />
         {/* Inicio de meta tags de licencia - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
-        <meta content="goncy" name="author" />
-        <meta content="Gonzalo Pozzo" name="copyright" />
+        <meta content="mad" name="author" />
+        <meta content="mad" name="copyright" />
         {/* Fin de meta tags de licencia */}
       </Head>
       <ChakraProvider theme={theme}>
         <Container backgroundColor="white" borderRadius="sm" maxWidth="container.xl" padding={4}>
           <Stack spacing={8}>
             <Stack marginBottom={4} spacing={4}>
-              <Image
+              <Image transition-style="in:wipe:right"
                 borderRadius="lg"
                 height="100%"
                 maxHeight={64}
