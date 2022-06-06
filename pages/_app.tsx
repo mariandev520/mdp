@@ -95,7 +95,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
                           width={10}
                         >
                           <Image
-                            className="animate__animated animate__rotateIn animate__slow	3s animate__infinite	infinite"
+                            className="animate__animated animate__rotateIn animate__slow	3s "
                             src={`https://icongr.am/fontawesome/${social.name}.svg?size=24&color=ffffff`}
                           />
                         </Flex>
@@ -132,7 +132,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
           <Divider marginY={4} />
           {/* Inicio de copyright - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
           <Text
-            className="animate__animated animate__flipInY animate__slow	2s animate__repeat-3	3"
+            className="animate__animated animate__flipInY animate__slow	2s "
             color="blue.500"
             textAlign="center"
           >

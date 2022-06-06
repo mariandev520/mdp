@@ -63,13 +63,16 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
     )
   }
   
+  const loco = product.category=="BB"
 
   return (
     <>
 
+      
+
     <AnimateSharedLayout type="crossfade">
  
-        {product.category=="BB"?
+        {loco?
       <Stack
         key={product.id}
         alignItems="center"
@@ -82,7 +85,8 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
         spacing={3}
       >
         <Stack direction="row" padding={2} spacing={4} width="100%">
-          <Image
+        
+          <Image 
           as={motion.img}
             backgroundColor="white"
             borderRadius="md"
@@ -94,9 +98,9 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
             objectFit="contain"
             src={product.image}
             width={{base: 24, sm: 36}}
-          
+             
           />
-          {BasicUsage()}
+         
             <AnimatePresence >
           {selectedImage && <Flex   
           key="backdrop" alignItems="left" 
@@ -130,9 +134,9 @@ const ProductCard: React.FC<Props> = ({product, onAdd}) => {
             { selectedImage==(null)  && 
             
               <Button className="animate__animated animate__flash animate__slow	2s animate__infinite	infinite"
-              color="purple" 
+              color="black" 
                 size="sm"
-                bgColor="yellow.100"
+                bgColor="purple.100"
                
               
                  onClick={() => (product.options ? toggleModal(true) : onAdd(cartItem))}
